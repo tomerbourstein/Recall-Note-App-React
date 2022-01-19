@@ -37,6 +37,7 @@ function CreateArea(props) {
       content: ""
     });
     event.preventDefault();
+    unExpand();
   }
 
   return (
@@ -54,7 +55,6 @@ function CreateArea(props) {
         <textarea
           name="content"
           onClick={expand}
-          onBlur={unExpand}
           onChange={handleChange}
           value={note.content}
           placeholder="Take a note..."
